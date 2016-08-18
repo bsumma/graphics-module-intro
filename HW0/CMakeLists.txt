@@ -12,10 +12,6 @@ link_libraries(glfw)
 include_directories(${glfw_INCLUDE_DIRS})
 include_directories("${CMAKE_SOURCE_DIR}/glfw-3.2/deps")
 
-#OpenGL Loader
-#set(GLAD "${CMAKE_SOURCE_DIR}/glfw-3.2/deps/glad/glad.h"
-#         "${CMAKE_SOURCE_DIR}/glfw-3.2/deps/glad.c")
-
 add_library(glad "${CMAKE_SOURCE_DIR}/glfw-3.2/deps/glad/glad.h"
          		 "${CMAKE_SOURCE_DIR}/glfw-3.2/deps/glad.c")
 				 
@@ -50,21 +46,3 @@ if (APPLE)
                           MACOSX_BUNDLE_LONG_VERSION_STRING ${GLFW_VERSION_FULL}
     					  MACOSX_BUNDLE_ICON_FILE glfw.icns)
 endif()
-
-
-#INCLUDE_DIRECTORIES(./
-#				    ./source/common
-#					${CMAKE_SOURCE_DIR}/shaders/
-#					${OPENGL_INCLUDE_DIR} 
-#					${GLUT_INCLUDE_DIR})
-#LINK_LIBRARIES(${OPENGL_LIBRARY}
-#			   ${GLUT_LIBRARY})
-
-
-#ADD_EXECUTABLE(triangle
-#			source/common/Angel.h
-#			source/common/mat.h
-#			source/common/vec.h
-#			source/common/InitShader.cpp
-#			source/triangle.cpp
-#			)
