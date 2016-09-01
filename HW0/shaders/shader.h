@@ -9,7 +9,7 @@
 
 #include <string>
 
-std::string shader_path = "/Users/bsumma/Teaching/graphics/2016/template_code/HW0/shaders/";
+std::string shader_path = "/home/bsumma/source/teaching/template_code/HW0/shaders/";
 
 
 #endif // __SHADER_H__

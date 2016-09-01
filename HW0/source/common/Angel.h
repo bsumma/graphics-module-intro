@@ -16,6 +16,8 @@
 
 #include <cmath>
 #include <iostream>
+#include <cstdio>
+#include <stdlib.h>
 
 //  Define M_PI in the case it's not defined in the math header file
 #ifndef M_PI
