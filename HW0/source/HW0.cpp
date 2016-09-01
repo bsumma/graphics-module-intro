@@ -89,18 +89,20 @@ int main(void)
   program = glCreateProgram();
   glAttachShader(program, vertex_shader);
   glAttachShader(program, fragment_shader);
-  
-  glBindFragDataLocation(program, 0, "fragColor");
 
   glLinkProgram(program);
-
   check_program_link(program);
+  
+  glBindFragDataLocation(program, 0, "fragColor");
 
   vpos_location   = glGetAttribLocation(program, "vPos");
   
   glEnableVertexAttribArray(vpos_location);
   glVertexAttribPointer( vpos_location, 2, GL_FLOAT, GL_FALSE, 0, BUFFER_OFFSET(0) );
 
+  glClearColor(1.0, 1.0, 1.0, 1.0);
+  
+  //glPolygonMode( GL_FRONT_AND_BACK, GL_LINE );
   
   while (!glfwWindowShouldClose(window))
     {
