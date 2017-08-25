@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8)
-PROJECT(Assignment 0)
+PROJECT(Assignment_0)
 SET(CMAKE_BUILD_TYPE "Release")
 
 if (!MSVC)
