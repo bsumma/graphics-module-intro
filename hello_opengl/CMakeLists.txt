@@ -21,7 +21,7 @@ SET(MY_SHADER_PATH ${CMAKE_SOURCE_DIR}/shaders/)
 CONFIGURE_FILE(${CMAKE_SOURCE_DIR}/shaders/shader.h.in ${CMAKE_SOURCE_DIR}/shaders/shader.h)
 
 
-include_directories(${CMAKE_SOURCE_DIR}/src
+include_directories(${CMAKE_SOURCE_DIR}/source
 					${CMAKE_SOURCE_DIR}/shaders)
 add_executable(square WIN32 MACOSX_BUNDLE 
 	source/square.cpp 
