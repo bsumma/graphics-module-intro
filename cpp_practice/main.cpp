@@ -26,7 +26,7 @@ int main()
   //3: Create an array of 32 vec3 (class from vec.h) with values [(1,2,3),(4,5,6),...]
 
   
-  //4: Iterate over previous array as a memory offset
+  //4: Iterate over previous array as a memory offset, not by index.
 
   
   //5: Copy the 3 array into a new array of 32 vec3s using memcpy
