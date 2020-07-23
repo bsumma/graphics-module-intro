@@ -9,7 +9,7 @@
 
 #include <string>
 
-std::string shader_path = "/Users/bsumma/Teaching/graphics/2018/assignment_0/hello_opengl/shaders/";
+std::string shader_path = "/Users/bsumma/Teaching/graphics/2020/assignment_0/hello_opengl/shaders/";
 
 
 #endif // __SHADER_H__

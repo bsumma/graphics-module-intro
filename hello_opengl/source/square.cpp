@@ -48,12 +48,14 @@ int main(void)
   gladLoadGLLoader((GLADloadproc) glfwGetProcAddress);
   glfwSwapInterval(1);
   
-  Angel::vec2 shape[6]     = { Angel::vec2( -0.5, -0.5),
-                               Angel::vec2( -0.5, 0.5 ),
-                               Angel::vec2( 0.5, 0.5 ),
-                               Angel::vec2( -0.5, -0.5),
-                               Angel::vec2( 0.5, 0.5 ),
-                               Angel::vec2( 0.5, -0.5 )};
+  
+  Angel::vec2 * shape = new Angel::vec2[6];
+  shape[0] =  Angel::vec2( -0.5, -0.5);
+  shape[1] =  Angel::vec2( -0.5, 0.5);
+  shape[2] =  Angel::vec2( 0.5, 0.5);
+  shape[3] =  Angel::vec2( -0.5, -0.5);
+  shape[4] =  Angel::vec2( 0.5, 0.5);
+  shape[5] =  Angel::vec2( 0.5, -0.5);
 
   GLuint vao, buffer;
 
@@ -68,7 +70,7 @@ int main(void)
   glBindBuffer( GL_ARRAY_BUFFER, buffer );
 
   //Send vertex data to GPU
-  glBufferData( GL_ARRAY_BUFFER, sizeof(shape), shape, GL_STATIC_DRAW );
+  glBufferData( GL_ARRAY_BUFFER, sizeof(Angel::vec2)*6, shape, GL_STATIC_DRAW );
 
   std::string vshader = shader_path + "vshader.glsl";
   std::string fshader = shader_path + "fshader.glsl";
