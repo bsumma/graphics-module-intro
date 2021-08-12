@@ -9,7 +9,7 @@ endif()
 
 include_directories(${CMAKE_SOURCE_DIR})
 					
-add_executable(practice WIN32 MACOSX_BUNDLE main.cpp vec.h)
+add_executable(practice  MACOSX_BUNDLE main.cpp vec.h)
 
 #Windows cleanup
 if (MSVC)
