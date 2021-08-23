@@ -33,7 +33,10 @@ struct vec2 {
     //  --- Constructors and Destructors ---
     //
 
-    vec2( float s = float(0.0) ) :
+    vec2(  ) :
+	x(float(0.0)), y(float(0.0)) {}
+
+    explicit vec2( float s ) :
 	x(s), y(s) {}
 
     vec2( float x, float y ) :
@@ -172,7 +175,10 @@ struct vec3 {
     //  --- Constructors and Destructors ---
     //
 
-    vec3( float s = float(0.0) ) :
+    vec3(  ) :
+	x(float(0.0)), y(float(0.0)), z(float(0.0)) {}
+
+    explicit vec3( float s ) :
 	x(s), y(s), z(s) {}
 
     vec3( float x, float y, float z ) :
@@ -322,7 +328,10 @@ struct vec4 {
     //  --- Constructors and Destructors ---
     //
 
-    vec4( float s = float(0.0) ) :
+    vec4(  ) :
+	x(float(0.0)), y(float(0.0)), z(float(0.0)), w(float(0.0)) {}
+
+    explicit vec4( float s ) :
 	x(s), y(s), z(s), w(s) {}
 
     vec4( float x, float y, float z, float w ) :
